@@ -1,4 +1,5 @@
 const express=require('express');
+require('dotenv').config('./.env');
 const passport=require('passport');
 const ejs=require('ejs');
 const app=express();
@@ -6,12 +7,13 @@ const ejsLayouts=require('express-ejs-layouts');
 const Port=8000;
 const mongoose=require('mongoose');
 const mongUrl="mongodb://localhost:27017/Placment_cell";
+const mongo="mongodb+srv://akash7067tiwari:hello@cluster0.ife2e1w.mongodb.net/?retryWrites=true&w=majority";
 const path=require('path');
 const session=require('express-session');
 const passportLocal=require('./config/passport');
 app.use(express.urlencoded({extended:true}));
 // mongoDb connection
-mongoose.connect(mongUrl,{useNewUrlParser:true}).then(()=>console.log('MongoDb connected'))
+mongoose.connect(mongo,{useNewUrlParser:true}).then(()=>console.log('MongoDb connected'))
 .catch(err=>console.log(err));
 // mongoDb connection
 
