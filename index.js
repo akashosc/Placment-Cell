@@ -41,9 +41,7 @@ app.use(session({
     secret: 'Passbookblud',
     saveUninitialized: false,
     resave: false,
-    cookie: {
-        maxAge: (1000 * 60 * 100)
-    }
+    
 }));
 app.use(passport.initialize());
 app.use(passport.session());
