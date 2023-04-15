@@ -1,0 +1,16 @@
+<link rel="stylesheet" href="/index.css">
+    <div class="Add-student">
+      <h2>Allocate Student to Interview at <%=name%></h2>
+      <form action="/editinterview" method="post" class="signup">
+          <input type="email" name="studentemail" placeholder="Enter Student email" required>
+          <input type="text" hidden name="Company" value="<%=name%>">
+          <input type="date" name="date" value="<%=date%>">
+          <select name="status" required>
+           <option value="" disabled selected hidden>Status</option>
+             <option value="Pass">Pass</option>
+             <option value="Fail">Fail</option>
+             <option value="Panding">Panding</option>
+          </select>
+         <button type="submit" class="btn-add">Add Interview</button>
+      </form>
+   </div>

@@ -1,0 +1,14 @@
+<link rel="stylesheet" href="/index.css">
+    <div class="Add-student">
+      <h2>Edit Student</h2>
+     <form action="/editstudent/<%=student._id%>" method="post">
+      <label for="college">Name</label><input type="text" name="name" value="<%=student.name%>">
+        <label for="college">Email</label><input type="email" name="email" value="<%=student.email%>">
+        <label for="college">College Name</label>  <input type="text" name="college" value="<%=student.college%>">
+        <label for="dsa">Dsa score</label>  <input type="text" name="dsa" value="<%=student.dsa%>">
+        <label for="web">Web score</label> <input type="text" name="web" value="<%=student.web%>">
+        <label for="react">React score</label> <input type="text" name="react" value="<%=student.react%>">
+        <label for="status">Placed/unplaced</label>  <input type="text" name="status" value="<%=student.status%>">
+        <button type="submit" class="btn-add">Edit</button>
+     </form>
+</div>

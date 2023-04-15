@@ -1,0 +1,131 @@
+:root {
+    --first:#18122B;
+    --second:#393053;
+    --third:#443C68;
+    --forth:#635985;
+    --color:#F0F0F0; 
+    --box:box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+ }
+ ::placeholder{
+    color: whitesmoke;
+ }
+
+ i p{
+    font-size: 1rem;
+    text-align: center;
+ }
+ a:hover{
+    color: red;
+ }
+ a{
+    text-align: center;
+    padding: 1rem;
+    color: var(--color);
+    font-size: 1.5rem;
+ }
+body{
+    padding: 0;
+    margin: 0;
+  background-color: var(--third);
+}
+
+.nav-bar{
+    display: flex;
+    justify-content: space-around;
+    align-items: center; 
+    background-color:var(--first);
+    color: var(--color);
+    padding: 2rem;
+}
+.main-section{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items:start;
+    color: var(--color);
+    /* display: none; */
+}
+td,.ido{
+    color: var(--color);
+}
+.student-section{
+    margin-top:1rem ;
+    box-shadow: var(--box);
+    background-color: var(--forth);
+    border-radius: 1rem;
+}
+.student-section h1{
+    padding: 1rem;
+    
+    text-align: center;   
+}
+.all-student{
+    padding: 1rem;
+}
+
+/* Student edit form and add form */
+
+.Add-student{
+    /* display: none; */
+    margin: 3rem auto;
+    width: 35rem;
+    background-color: var(--forth);
+    padding:1rem 3rem;
+    color: var(--color);
+    border-radius: 1rem;
+}
+.Add-student h2{
+  text-align: center;
+}
+.Add-student form{
+    display: flex;
+    flex-direction: column;
+}
+.Add-student form button{
+    background-color: var(--first);
+    width: 20rem;
+   margin: 1rem auto;
+   box-shadow: var(--box);
+   color: var(--color);
+   padding: 1rem;
+   border-radius: 1rem;
+}
+.Add-student form select{
+    margin-top:1rem ;
+    color: var(--color);
+    background-color: var(--third);
+    padding:0.5rem 1rem;
+    outline: none;
+    border: 0px;
+    border-radius: 1rem;
+}
+.Add-student form select option{
+    color: var(--color);
+    background-color: var(--third);
+    padding:0.5rem 1rem;
+    outline: none;
+    border: 0px;
+    border-radius: 1rem;
+}
+.Add-student form input{
+    background-color: var(--third);
+    padding: 0.5rem 1rem;
+    outline: none;
+    border: 0px;
+    border-radius: 1rem;
+}
+/* Student edit form and add form */
+.Student-interview{
+    margin: 3rem auto;
+    width: 50rem;
+}
+/* Interview edit form and add form */
+
+/* interview edit form and add form */
+
+/* sign up login */
+.signup input{
+    margin: 0.5rem;
+}
+/* sign up login */
+

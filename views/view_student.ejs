@@ -1,0 +1,31 @@
+<link rel="stylesheet" href="/index.css">
+    <div class="Student-interview">
+      <div class="student-section ">
+          <h1>Name:<%=name%></h1>
+          <div class="all-student">
+          <table class="table">
+           <thead class="thead-dark">
+             <tr>
+               <th scope="col">Company Name</th>
+               <th scope="col">Interview Data</th>
+               <th scope="col">Pass or fail</th>
+             </tr>
+           </thead>
+           <tbody>
+            <%for(students of student){%>
+              <tr>
+                <th scope="row" class="ido"><%=students.name%></th>
+                <td><%=students.date%></td>
+                <%if(students.status==='Pass'){%>
+                <td style="font-weight: bold; color:black;"><i style="font-size: 1.5rem;margin-right:1rem; color:lightcoral;" class="fa fa-check-circle"></i><%=students.status%></td>
+                <%}else{%>
+                  <td style="font-weight: bold; color:black;"><i style="font-size: 1.5rem;margin-right:1rem; color:red;" class="fa fa-times"></i><%=students.status%></td>
+                  <%}%>
+              </tr>
+            <%}%>
+             
+           </tbody>
+         </table>
+  </div>
+  </div>
+  </div>

@@ -1,0 +1,73 @@
+<h3 style="text-align: center;color: aliceblue;padding: 1rem;"><span style="color:salmon;margin-right:1rem ;"> Username :</span><%=locals.user.name%></h3>
+
+<div class="main-section">
+ 
+      <div class="student-section">
+         <h1>Student-Section</h1>
+         <div class="all-student">
+         <table class="table" id="myTable">
+          <thead class="thead-dark">
+            <tr>
+              <th scope="col">Student_id</th>
+              <th scope="col">Email</th>
+              <th scope="col">Name</th>
+              <th scope="col">College Name</th>
+              <th scope="col">DSA score</th>
+              <th scope="col">Web score</th>
+              <th scope="col">React score</th>
+              <th scope="col">Placment Status</th>
+              <th scope="col">Edit or Delite or view</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% var i=1 %>
+            <%for(students of student){%>
+              <tr>
+                <th scope="row" class="ido"><%=i%></th>
+                <td><%=students.email%></td>
+                <td><%=students.name%></td>
+                <td><%=students.college%></td>
+                <td><%=students.dsa%></td>
+                <td><%=students.web%></td>
+                <td><%=students.react%></td>
+                <%if(students.status==='Placed'){%>
+                  <td style="color:black;font-weight: bold; font-size: 1.5rem; "><%=students.status%></td>
+                <%} else{%>
+                  <td style="color:white;font-weight: bold; font-size: 1.5rem;"><%=students.status%></td>
+                <%}%>
+                <td><a href="/viewstudent/<%=students._id%>"><i class="fa fa-eye"></i></a><a href="/editstudent/<%=students._id%>"><i class="fa fa-pencil"></i></a><a href="/deletestudent/<%=students._id%>"><i class="fa fa-trash-o"></i></a></td>
+              </tr>
+              <%i++%>
+            <%}%> 
+          </tbody>
+        </table>
+      </div>
+      </div>
+      <div class="student-section">
+          <h1>Interview</h1>
+          <div class="all-student">
+          <table class="table">
+           <thead class="thead-dark">
+             <tr>
+               <th scope="col">Company Name</th>
+               <th scope="col">Data</th>
+               <th scope="col">Edit or delete</th>
+             </tr>
+           </thead>
+           <tbody>
+            <%for(interviews of interview){%>
+              <tr>
+               <th scope="row" class="ido"><%=interviews.companyname%></th>
+               <td><%=interviews.date%></td>
+               <td><a href="/editinterview/<%=interviews._id%>"><i class="fa fa-pencil"></i></a><a href="/deleteinterview/<%=interviews._id%>"><i class="fa fa-trash-o"></i></a></td>
+              </tr>
+            
+              <%}%> 
+           </tbody>
+         </table>
+       </div>
+       </div>
+  </div>
+
+   
+
