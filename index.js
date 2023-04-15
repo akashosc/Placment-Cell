@@ -26,9 +26,10 @@ mongoose.connect(mongUrl,{useNewUrlParser:true}).then(()=>console.log('MongoDb c
 app.use(ejsLayouts);
 app.set('layout extractStyles', true);
 app.set('view engine','ejs');
+app.set('views', path.join(__dirname, 'views'));
 // set view engine
-app.use(express.static('./assits'));
-
+// app.use(express.static('./assits'));
+app.use(express.static(__dirname + '/assits'));
 
 // passport plugin
 
